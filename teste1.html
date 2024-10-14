@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Teste Target - Fibonacci</title>
+      <style>
+         body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         background-color: #f0f0f0;
+         }
+         .container {
+         text-align: center;
+         background-color: white;
+         padding: 20px;
+         border-radius: 8px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         }
+         input {
+         padding: 10px;
+         margin-top: 10px;
+         width: 30%;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         }
+         button {
+         padding: 10px 20px;
+         margin-top: 10px;
+         border: none;
+         background-color: #28a745;
+         color: white;
+         border-radius: 4px;
+         cursor: pointer;
+         }
+         button:hover {
+         background-color: #218838;
+         }
+         .resultado {
+         margin-top: 20px;
+         font-weight: 600;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <h1>Verifica se um número pertence a sequência de Fibonacci</h1>
+         <input type="number" id="numeroInformado" placeholder="Digite um número! Padrão = 0"/>
+         <button onclick="verificaFibonacci()">Verificar</button>
+         <div class="resultado" id="resultado"></div>
+      </div>
+      <script>
+         function verificaFibonacci() {
+            let numero0 = 0;
+            let numero1 = 1;
+            let fibonacci = numero0;
+            let valorInformado = document.getElementById('numeroInformado').value;
+
+            while (fibonacci < valorInformado) {
+                fibonacci = numero0 + numero1;
+                numero0 = numero1;
+                numero1 = fibonacci;
+            }
+
+            const resultadoDiv = document.getElementById('resultado')
+             if (fibonacci == valorInformado) {
+                 resultadoDiv.innerText = "Seu número faz parte da sequência de Fibonacci!"
+             } else {
+                 resultadoDiv.innerText = "Seu número não faz parte da sequência de Fibonacci, tente novamente!"
+             }
+         }
+
+      </script>
+   </body>
+</html>
