@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Teste Target - Busque a letra!</title>
+      <style>
+         body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         background-color: #f0f0f0;
+         }
+         .container {
+         text-align: center;
+         background-color: white;
+         padding: 20px;
+         border-radius: 8px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         }
+         input {
+         padding: 10px;
+         margin-top: 10px;
+         width: 30%;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         }
+         button {
+         padding: 10px 20px;
+         margin-top: 10px;
+         border: none;
+         background-color: #28a745;
+         color: white;
+         border-radius: 4px;
+         cursor: pointer;
+         }
+         button:hover {
+         background-color: #218838;
+         }
+         .resultado {
+         margin-top: 20px;
+         font-weight: 600;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <h1>Descubra se a tem uma certa letra no seu texto!</h1>
+         <input type="text" id="frase" placeholder="Digite aqui sua frase preferida!"/>
+         <input type="text" id="letra" placeholder="Digite aqui a letra para ser encontrada! Por padrão, é 'a'"/>
+         <button onclick="procurarLetra()">Procurar letra!</button>
+         <div class="resultado" id="resultado"></div>
+      </div>
+      <script>
+
+        function procurarLetra() {
+            const frase = document.getElementById('frase').value;
+            const letra = document.getElementById('letra').value;
+            const resultadoDiv = document.getElementById('resultado');
+            let quantidade = 0;
+
+            if (letra.length === 1) {
+
+                for (let i = 0; i < frase.length; i++) {
+                    if( frase[i].toLowerCase() === letra.toLowerCase()) {
+                        quantidade++;
+                    }
+                }
+
+            if (quantidade > 0) {
+                resultadoDiv.innerText = `A letra "${letra}" foi sim encontrada na sua frase e um total de ${quantidade} vezes! :)`
+            } else {
+                resultadoDiv.innerText = `A letra "${letra}" infelizmente não foi encontrada na sua frase! :(`
+            }
+        }else {
+            alert("Ops! Parece que você colocou mais de uma letra! Por favor, digite apenas 1 para ser encontrada!")
+                console.log('a')
+        }}
+
+      </script>
+   </body>
+</html>
