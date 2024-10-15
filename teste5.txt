@@ -1,0 +1,12 @@
+Nesse teste vou levar em consideração que estamos usando lâmpadas "antigas", que aqui onde moro chamamos de florecentes,
+ela é um tipo de lâmpada amarelada que tem a caracteristica de esquentar bastante a partir de um tempo sendo usada 
+(mas de leds também esquentam), então com isso em mente eu:
+
+1. Ligaria o interruptor 1 e iria até a sala, assim eu saberia qual a lâmpada 1
+
+2. Ao voltar da sala das lâmpadas, já saberia qual lâmpada o interruptor 1 acendeu e desligaria essa lâmpada,
+nisso eu ligaria o interruptor 2 e deixaria por vários minutos (ou horas)
+depois de deixar bastante tempo ligada, eu desligaria ela e ligaria o interruptor 3
+Assim, ao usar minha segunda ida à sala das lâmpadas, eu teria já a informação de qual foi a primeira
+lâmpada que liguei (pois fui lá olhar), verificaria qual lâmpada está apagada e quente, essa seria a lâmpada do 
+interruptor 2 e a lâmpada que estiver ligada, seria a do interruptor 3
