@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste Target - Valor final da variável</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .variavel {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Variáveis Brutas do Teste:</h1>
+        <div class="variavel">INDICE: 12</div>
+        <div class="variavel">SOMA: 0</div>
+        <div class="variavel">K: 1</div>
+
+        <h1>Resultado ao final das operações:</h1>
+        <div class="variavel">SOMA: <span id="soma"></span></div>
+    </div>
+    
+    <script>
+        //Aqui o código irá inicializar as variáveis, usando o exemplo do teste, mas convertendo para um código Javascript funcional
+        let INDICE = 12;
+        let SOMA = 0;
+        let K = 1;
+
+        //Aqui ele faz o cálculo simples das variações até atingir o valor final
+        while (K < INDICE) {
+            K = K + 1;
+            SOMA = SOMA + K;
+        }
+
+        //Aqui o código busca na página onde está o elemento com ID "soma" e faz a modificação para o resultado ser mostrado na tela
+        document.getElementById('soma').innerText = SOMA;
+    </script>
+</body>
+</html>
